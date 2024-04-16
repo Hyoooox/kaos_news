@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Kaos News</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css"> 
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <button class="tablink nav__logo" onclick="openTab(event, 'tab1')"><img src="./assets/img/logo k (1).jpg" alt="">Kaos News</button> 
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <button class="tablink nav__link" onclick="openTab(event, 'tab2')"><u>Redactar noticia</u></button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="tablink nav__link" onclick="openTab(event, 'tab3')"><u>Categorías</u></button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="tablink nav__link" onclick="openTab(event, 'tab4')"><u>Sobre nosotros</u></button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="tablink nav__link" onclick="openTab(event, 'tab5')"><u>Contáctanos</u></button>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <i class="ri-search-line nav__search" id="search-btn"></i>
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search " id="search">
+        <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="¿Qué estás buscando?" class="search__input">
+        </form>
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <div class="login col-3" id="login">
+        <form action="" class="login__form">
+            <h2 class="login__title">Iniciar sesión</h2>
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">Email</label>
+                    <input type="email" placeholder="Escribe tu correo electrónico" id="email" class="login__input">
+                </div>
+                <div>
+                    <label for="password" class="login__label">Contraseña</label>
+                    <input type="password" placeholder="Introduce tu contraseña" id="password" class="login__input">
+                </div>
+            </div>
+            <div>
+                <p class="login__signup">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+                <a href="#" class="login__forgot">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="login__button">Ingresar</button>
+            </div>
+        </form>
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div class= col-3>
+
+    <div class="tabs">
+        <div id="tab1" class="tabcontent">
+            <!--contenido de la pestaña Kaos News -->
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Carrusel de noticias destacadas -->
+                        <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./assets/img/dinoteje.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Joven emprendedora abre su propio negocio</h5>
+                                        <p>Un pequeño emprendimiento demuestra que incluso las carreras más difíciles permiten explorar otras alternativas para ganar dinero.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./assets/img/Zuckerberg.jpeg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Mark Zuckerberg se disculpa ante las familias de niños que han sufrido daños por culpa de las redes sociales</h5>
+                                        <p>El director ejecutivo de Meta, Mark Zuckerberg, se disculpó con las familias que afirman que sus hijos han sido perjudicados por las redes sociales,
+                                             durante una acalorada audiencia este miércoles en el Senado de Estados Unidos.</p>
+                                    </div>
+                                </div>
+                                <!-- Agregale  elementos carousel según sea necesario -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+
+                        <!-- Sección de noticias adicionales -->
+                        <div class="mb-5">
+                            <h2>Otras noticias</h2>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nuevos smartphones plegables revolucionan el mercado</h5>
+                                    <p class="card-text">La industria tecnológica ha sido testigo de la presentación de una nueva generación de smartphones plegables por parte de varios fabricantes líderes. Estos dispositivos prometen revolucionar el mercado al ofrecer pantallas flexibles de alta calidad, lo que permite a los usuarios disfrutar de experiencias multitarea y de entretenimiento más inmersivas.</p>
+                                    <a href="noticia-detalle.html" class="btn btn-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <!-- Sección de noticias recientes -->
+                        <h2>Noticias recientes</h2>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action p-5">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Attack on Titan llega a su final con un impactante episodio</h5>
+                                    <small>04 de abril del 2024</small>
+                                </div>
+                                <img src="./assets/img/n1.jpeg" class="img-fluid rounded" alt="Imagen de la noticia 1">
+                                <p class="mb-1">Los fanáticos de la serie han elogiado la adaptación del manga original y destacan el cierre adecuado para una trama que ha mantenido expectantes a millones de personas en todo el mundo.</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action p-5">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Joven emprendedora abre su propio negocio</h5>
+                                    <small>05 de abril del 2024</small>
+                                </div>
+                                <img src="./assets/img/dino.jpg" class="img-fluid rounded" alt="Imagen de la noticia 2">
+                                <p class="mb-1">Un pequeño emprendimiento demuestra que incluso las carreras más difíciles permiten explorar otras alternativas para ganar dinero.</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action p-5">
+                              <div class="d-flex w-100 justify-content-between">
+                                  <h5 class="mb-1">Lewis Hamilton firma extensión de contrato con Mercedes</h5>
+                                  <small>05 de abril del 2024</small>
+                              </div>
+                              <img src="./assets/img/le.jpeg" class="img-fluid rounded" alt="Imagen de la noticia 2">
+                              <p class="mb-1">La noticia ha sido confirmada por la escudería, asegurando la continuidad de Hamilton en el equipo por al menos dos temporadas más. </p>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="tabcontent">
+            <!--contenido específico de redactar Noticias -->
+            <div class="news">
+              <h2>Publicar Noticia</h2>
+              <form id="newsForm">
+                  <div class="form-group">
+                      <label for="newsTitle">Título</label>
+                      <input type="text" id="newsTitle" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="newsContent">Contenido</label>
+                      <textarea id="newsContent" rows="6" required></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="newsImage">Imagen</label>
+                      <input type="file" id="newsImage" accept="image/*">
+                  </div>
+                  <div class="form-group">
+                      <label for="newsVideo">Video</label>
+                      <input type="file" id="newsVideo" accept="video/*">
+                  </div>
+                  <button class="publicarnoticia" type="submit">Publicar</button>
+              </form>
+          </div>
+        </div>
+        <div id="tab3" class="tabcontent">
+        <!--contenido categorias --> 
+            <div class="categories">
+                <div class="category">
+                    <img src="./assets/img/f1.avif" alt="Categoría 1">
+                    <h3>Deportes</h3>
+                    <p>Noticias de Deportes</p>
+                </div>
+                <div class="category">
+                    <img src="./assets/img/tech.avif" alt="Categoría 2">
+                    <h3>Tecnología</h3>
+                    <p>Noticias sobre tecnologia</p>
+                </div>
+                <div class="category">
+                    <img src="./assets/img/dino.jpg" alt="Categoría 3">
+                    <h3>Estilo de vida</h3>
+                    <p>Consejos de estilo de vida</p>
+                </div>
+                <div class="category">
+                  <img src="./assets/img/fondo3.avif" alt="Categoría 4">
+                  <h3>Arte</h3>
+                  <p>Noticias sobre arte</p>
+              </div>
+            </div>
+        </div>
+        <div id="tab4" class="tabcontent">
+            <!--contenido específico de Sobre nosotros -->          
+              <div class="about-section">
+                  <div class="about-text">
+                      <h2>Sobre Nosotros</h2>
+                      <p>Somos estudiantes de Informática de Duoc UC, apasionados por la tecnología y el desarrollo de software. Nuestro equipo está conformado por Álvaro Flores, Aurora Mansilla y Gabriel Muñoz.</p>
+                      <p>Nos encontramos en una constante búsqueda de conocimiento y experiencia para avanzar en nuestra carrera profesional. Este proyecto es una oportunidad para aplicar lo aprendido en el aula y desarrollar nuevas habilidades en el mundo real.</p>
+                      <p>Si deseas obtener más información sobre nuestro equipo o colaborar en futuros proyectos, ¡PUEDES SEGUIRNOS EN NUESTRAS REDES SOCIALES!</p>
+                      <p>
+                        <img class="gato"src="assets/img/Gato_gracias (2).png" alt="">
+                      </p>
+                      <div class="about-links">
+                          <a href="https://www.instagram.com/dinoteje/?img_index=1">Instagram Aurora</a>
+                          <a href="#">Instagram Alvaro</a>
+                          <a href="#">Instagram Gabriel</a>
+                      </div>
+                  </div>
+              </div>
+            
+        </div>
+        <div id="tab5" class="tabcontent">
+             <!--contenido específico "contactanos" -->
+            <section class="contact-section">
+              <div class="container">
+                  <div class="contact-form">
+                      <h2>¡Contáctanos!</h2>
+                          <div class="mb-3">
+                              <input type="text" class="form-control" placeholder="Nombre" required>
+                          </div>
+                          <div class="mb-3">
+                              <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                          </div>
+                          <div class="mb-3">
+                              <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-contact">Enviar mensaje</button>
+                  </div>
+              </div>
+          </section>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2024 Kaos News. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
+
